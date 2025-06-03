@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>Felo Search Form</title>
+    <style>
+        /* Optional: Add some basic styling for the form */
+        body { font-family: sans-serif; margin: 20px; }
+        #searchText { padding: 8px; margin-right: 5px; }
+        button { padding: 8px 12px; }
+    </style>
+</head>
+<body>
+    <form id="feloSearch" action="https://felo.ai/search/" method="GET" target="_blank" onsubmit="var keyword = document.getElementById('searchText').value; document.getElementById('qField').value = keyword + ' site:blog.terrytech.org';">
+      <input id="searchText" type="text" placeholder="在本站搜尋...">
+      <input id="qField" type="hidden" name="q">
+      <button type="submit">搜尋</button>
+    </form>
+    <script>
+      // The core JavaScript logic is already in the onsubmit attribute of the form.
+      // Important: The 'site:yourwebsite.com' part in the onsubmit attribute
+      // needs to be replaced with the actual website domain you intend to search.
+    </script>
+</body>
+</html>
